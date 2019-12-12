@@ -1,0 +1,20 @@
+{
+  "short_name": "Pray for America Bible",
+  "name": "The One Year Pray for America Bible",
+  "start_url": "https://www.tyndale.com/sites/oneyearbible/?source=pwa",
+  "icons": [
+    {
+      "src": "assets/img/tyndale-logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/img/tyndale-logo@2x.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#236791",
+  "display": "minimal-ui",
+  "theme_color": "#236791"
+}
