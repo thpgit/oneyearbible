@@ -576,6 +576,10 @@ img {
   color: #236791;
 }
 
+.video-trigger {
+  text-align: left;
+}
+
 #reading-plans {
   position: absolute;
   top: 0;
@@ -600,7 +604,7 @@ img {
   padding: 1.5rem;
   width: 80%;
   height: 100%;
-  height: 90%;
+  height: auto;
   background-color: #fff;
   box-shadow: 3px 3px 30px 5px rgba(37, 37, 37, 0.3);
 }
@@ -889,6 +893,99 @@ img {
   margin: auto;
 }
 
+#popup-ad {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  display: none;
+  z-index: 5000;
+}
+
+.popup-ad-inner {
+  padding: 24px;
+  padding: 1.5rem;
+}
+
+.popup-ad-close {
+  color: #fff;
+  text-align: right;
+}
+
+.popup-ad-close:hover {
+  cursor: pointer;
+}
+
+.popup-ad-image {
+  max-width: 700px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 37, 37, 0.9);
+}
+
+#video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+#video-modal.active {
+  display: -ms-flexbox;
+  display: flex;
+  animation: fadeIn 300ms ease forwards;
+}
+
+#video-modal .video-modal-inner {
+  width: 80vw;
+  position: relative;
+}
+
+#video-modal .video-modal-close {
+  position: absolute;
+  top: -64px;
+  top: -4rem;
+  right: 0;
+  z-index: 1000;
+  font-size: 48px;
+  font-size: 3rem;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+  100% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  }
+}
+
 @media (min-width: 750px) and (max-width: 1239px) {
 
   .button {
@@ -990,7 +1087,7 @@ img {
 
   .reading-plans-inner {
     width: 80%;
-    height: 90%;
+    height: auto;
     padding: 2rem 4rem;
   }
 
