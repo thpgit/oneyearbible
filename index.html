@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="https://use.typekit.net/jdl2qvq.css"/>
     <!-- Load the main stylesheet-->
     <link rel="stylesheet" href="assets/css/main.css"/>
+    <!-- Load Bible Finder stylesheet-->
+    <link rel="stylesheet" href="assets/css/custom.css"/>
     <link rel="manifest" href="manifest.json"/>
     <link rel="apple-touch-icon" href="assets/img/apple-icon-180x180.png"/>
-	<link rel="stylesheet" href="assets/css/custom.css" />
   </head>
   <body>
     <div id="masthead">
@@ -52,6 +53,7 @@
           <footer class="about-buttons">
             <div class="about-buttons-wrapper"><a class="button button-ghost" href="https://www.paperturn-view.com/us/tyndale-bibles/one-year-pray-for-america-bible?pid=NTc57082&amp;v=1.8" target="_blank">Try it out</a></div>
             <div class="about-buttons-wrapper"><a class="button button-ghost reading-plan-trigger" href="#0">Read this month's reading plan</a></div>
+            <div class="about-buttons-wrapper"><a class="button button-ghost video-trigger" href="#0">Join Rebecca St. James in a one year reading plan&mdash;Watch a video to learn more</a></div>
             <div class="about-buttons-wrapper">
               <div class="button-group"><a class="button button-ghost retailer-button" href="#0">Buy Now - Select a Retailer <i class="zmdi zmdi-chevron-down"></i></a>
                 <ul class="button-dropdown-list" hidden="hidden">
@@ -101,6 +103,13 @@
 </table>
 </form>
           </footer>
+        </div>
+      </aside>
+      <div class="overlay"></div>
+      <aside id="video-modal">
+        <div class="video-modal-inner">
+          <p class="video-modal-close"><i class="zmdi zmdi-close"></i></p>
+          <div class="video flex-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/Gy_Ysz41pxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         </div>
       </aside>
     </section>
@@ -179,49 +188,41 @@
         <footer class="product-button-all"><a class="button" href="https://www.tyndale.com/l/one-year-bibles?tab=all&amp;zed=tab-all" target="_blank">View all One Year Bibles</a></footer>
       </div>
     </section>
-    <section>
-	      <div class="tyfb_wrapper">
-        <div class="text-center" id="mainHeading">
-            <div class="tyfb_heading">Find a Bible</div>
-            <p>Let us Help you find The One Year that's right for you</p>
-            <button id="showAllbtn">(Or We Can Show You All of Them)</button>
-           
-        </div>
-        <div class="text-center" id="headingShowAll" style="display: none;">
-            <div class="tyfb_heading">All One Year Products</div>
-            <button id="newSearchBtn">(Start a new search)</button>
-           
-        </div>
-        <div id="questionDiv" class="tyfb_quesarea">
-
-        </div>
-
-        <div class="tyfb_product-filters" id="resultDiv">
-            <h3 class="text-center" id="headerCurrentSelection">Your Current Selections</h3>
-            <div class="tyfb_container">
-                <div class="tyfb_row tyfb_row--center" id="currentSelections">
-                        
-
-                </div>
-                <div class="tyfb_search-result" id="noResultDiv" style="display: none;">
-                    <p>Your Current Search Returned No Results.</p>
-                    <span>Modify your selection above or see our recommended Bibles below.</span>
-                </div>
-                <div id="suggestedDiv" style="display: none;">
-                    <h3 class="text-center">Suggested Bibles:</h3>
-                    <p class="tyfb_product-filters__desc">The following results are a close match to your search.</p>
-                </div>
-                <div class="tyfb_row" id="productDiv">
-
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-     
-	</section>
-	<footer class="site-footer" id="colophon">
+    <!-- Popup Ad-->
+    <div id="popup-ad">
+      <div class="popup-ad-inner">
+        <p class="popup-ad-close"><i class="zmdi zmdi-close"></i></p><a class="popup-ad-image" href="http://bit.ly/36w9jyt" target="_blank"><img src="assets/img/contest-image.jpg"/></a>
+      </div>
+    </div><section>
+<div class="tyfb_wrapper">
+<div class="text-center" id="mainHeading">
+<div class="tyfb_heading">Find a Bible</div>
+<p>Let us Help you find The One Year that's right for you</p>
+<button id="showAllbtn">(Or We Can Show You All of Them)</button>
+</div>
+<div class="text-center" id="headingShowAll" style="display: none;">
+<div class="tyfb_heading">All One Year Products</div>
+<button id="newSearchBtn">(Start a new search)</button>
+</div>
+<div id="questionDiv" class="tyfb_quesarea"></div>
+<div class="tyfb_product-filters" id="resultDiv">
+<h3 class="text-center" id="headerCurrentSelection">Your Current Selections</h3>
+<div class="tyfb_container">
+<div class="tyfb_row tyfb_row--center" id="currentSelections"></div>
+<div class="tyfb_search-result" id="noResultDiv" style="display: none;">
+<p>Your Current Search Returned No Results.</p>
+<span>Modify your selection above or see our recommended Bibles below.</span>
+</div>
+<div id="suggestedDiv" style="display: none;">
+<h3 class="text-center">Suggested Bibles:</h3>
+<p class="tyfb_product-filters__desc">The following results are a close match to your search.</p>
+</div>
+<div class="tyfb_row" id="productDiv"></div>
+</div>
+</div>
+</div>
+</section>
+    <footer class="site-footer" id="colophon">
       <div class="site-footer-inner">
         <div class="site-info">
           <section id="footer-logo"><a href="https://www.tyndale.com/" target="_blank"><img src="assets/img/tyndale-logo.png" alt="Tyndale House Publishers Logo"/></a></section>
@@ -255,9 +256,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- Loads app-specific JS-->
     <script src="./assets/js/app.js"></script>
+    <!-- Loads Bible Finder scripts-->
+    <script src="./assets/js/main.js"></script>
     <!-- Load Google Analytics-->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-105226049-10"></script>
-	<script src="./assets/js/main.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
